@@ -1,5 +1,6 @@
 package com.example.Server.security;
 
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -9,6 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+import com.example.Server.model.User;
 import com.example.Server.repository.UserRepository;
 
 @Configuration
@@ -34,4 +36,15 @@ public class securityConfig {
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
+
+//     @Bean
+//     public ApplicationRunner dataloader(UserRepository repo, PasswordEncoder encoder){
+//         return args -> {
+//             repo.save(
+//                 new User("habuma", encoder.encode("password"), "ROLE_ADMIN")
+//             );
+//         }
+//     }
+
+
 }
