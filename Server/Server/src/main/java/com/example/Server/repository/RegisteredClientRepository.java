@@ -11,4 +11,6 @@ public interface RegisteredClientRepository {
 
     @Nullable
     RegisteredClient findByClientId(String clientid);
+
+
 }
