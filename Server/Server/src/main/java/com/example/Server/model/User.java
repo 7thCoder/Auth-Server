@@ -28,7 +28,7 @@ import lombok.RequiredArgsConstructor;
 @Table(name="users")
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @RequiredArgsConstructor
-public class User implements UserDetails {
+public class user implements UserDetails {
 
     private static final long serialVersionUID = 1L;
 
@@ -46,7 +46,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities(){
-        return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
+        return Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
     }
 
     @Override
