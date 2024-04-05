@@ -172,4 +172,5 @@ public class AuthorizationServerConfig {
     }
 }
 
+
 //http://localhost:9000/oauth2/authorize?response_type=code&client_id=taco-admin-client&redirect_uri=http://127.0.0.1:9090/login/oauth2/code/taco-admin-client&scope=writeIngredients+deleteIngredients
